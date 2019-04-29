@@ -1,0 +1,7 @@
+Site is based on hugo
+
+## To build Site
+
+1. Clone repo
+2. Install hugo
+3. Run `hugo`
