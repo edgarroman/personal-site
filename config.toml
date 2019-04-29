@@ -1,0 +1,26 @@
+baseURL = "http://edgarroman.com/"
+languageCode = "en-us"
+title = "Edgar Roman's Blog"
+theme = "personal-bs"
+copyright = "Copyright 2019"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+sectionPagesMenu = "main"
+
+[permalinks]
+    post = "/blog/:year/:month/:slug"
+    page = "/:slug/"
+
+[params]
+    author = "Edgar Roman"
+    description = "Another blog floating in the Internet"
+    tags = true
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "View all blog posts"
+    url = "/blog/"

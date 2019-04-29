@@ -1,0 +1,16 @@
+{{ $dateFormat := default "Mon Jan 2, 2006" (index .Site.Params "date_format") }}
+
+<article class="blog-post">
+    <header>
+        <h2 class="blog-post-title" dir="auto"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+        <p class="blog-post-meta"><time
+                datetime="{{ .Date.Format "2009-01-01T00:00:00Z05:00" }}">{{ .Date.Format $dateFormat }}</time>
+            {{ i18n "authoredBy" }}
+            {{ if or (.Params.categories) (.Params.tags) }}
+            {{ i18n "postedIn" }} {{ partial "meta-terms.html" . }}
+            {{ end }}
+        </p>
+    </header>
+    {{ .Summary }}
+    <a href='{{ .Permalink }}'>{{ i18n "readMore" }}</a>
+</article> <!-- /.blog-post -->
