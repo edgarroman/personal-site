@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h2>Posts with tag: {{ .Data.Terms }}</h2>
+{{ $truncate := default true .Site.Params.truncate }}
+{{ range .Paginator.Pages }}
+{{ if $truncate }}
+{{ .Render "summary" }}
+{{ else }}
+{{ .Render "content" }}
+{{ end }}
+{{ end }}
+
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+{{ partial "pagination.html" . }}
+{{ end }}
+
+{{ end }}

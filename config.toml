@@ -7,6 +7,8 @@ copyright = "Copyright 2019"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+googleAnalytics = "UA-26881057-1"
+
 sectionPagesMenu = "main"
 
 [permalinks]
