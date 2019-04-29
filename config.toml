@@ -1,4 +1,4 @@
-baseURL = "http://edgarroman.com/"
+#baseURL = "http://edgarroman.com/"
 languageCode = "en-us"
 title = "Edgar Roman's Blog"
 theme = "personal-bs"
