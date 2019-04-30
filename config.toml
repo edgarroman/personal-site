@@ -1,4 +1,4 @@
-#baseURL = "http://edgarroman.com/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Edgar Roman's Blog"
 theme = "personal-bs"
@@ -9,7 +9,7 @@ pygmentsUseClasses = true
 
 googleAnalytics = "UA-26881057-1"
 
-sectionPagesMenu = "main"
+#sectionPagesMenu = "main"
 
 [permalinks]
     post = "/blog/:year/:month/:slug"

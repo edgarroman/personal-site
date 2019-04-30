@@ -1,18 +1,17 @@
 {{ define "page-content" }}
 <div class="container">
 
-<h1 class="blog-title" dir="auto">Edgar Roman</h1>
-{{ if .Site.Params.description }}<p class="lead blog-description" dir="auto">{{ .Site.Params.description | markdownify }}</p>{{ end }}
-<p>
-Hello, as you see from the large title above, this is my personal blog site.  Let's get to it, shall we?
+    <h1 class="blog-title" dir="auto">Edgar Roman</h1>
+    {{ if .Site.Params.description }}<p class="lead blog-description" dir="auto">
+        {{ .Site.Params.description | markdownify }}</p>{{ end }}
+    <p>
+        Hello, as you see from the large title above, this is my personal blog site. Let's get to it, shall we?
 
-<h2>Most recent posts</h2>
+        <h2>Most recent posts</h2>
 
-{{ range first 5 (where .Site.Pages "Section" "in" .Site.Params.mainSections) }}
-
-{{ .Render "summary" }}
-{{ end }}
-
+        {{ range first 5 (where .Data.Pages "Section" "in" (slice "blog" )) }}
+        {{ .Render "summary" }}
+        {{ end }}
 
 </div>
 {{ end }}
