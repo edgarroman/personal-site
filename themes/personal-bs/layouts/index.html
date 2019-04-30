@@ -5,13 +5,18 @@
     {{ if .Site.Params.description }}<p class="lead blog-description" dir="auto">
         {{ .Site.Params.description | markdownify }}</p>{{ end }}
     <p>
-        Hello, as you see from the large title above, this is my personal blog site. Let's get to it, shall we?
+        Hello, this is my personal blog site. Let's get to it, shall we?
 
         <h2>Most recent posts</h2>
 
         {{ range first 5 (where .Data.Pages "Section" "in" (slice "blog" )) }}
         {{ .Render "summary" }}
         {{ end }}
+
+        <p>
+            <a href="">See all blog posts here
+            </a>
+        </p>
 
 </div>
 {{ end }}
