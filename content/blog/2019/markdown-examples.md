@@ -171,8 +171,6 @@ raw Markdown line up prettily. You can also use inline Markdown.
 
 ## BlockQuotes
 
-TODO: Style blockquotes
-
 {{< markdown-blocks tabID="blockquotes" >}}
 
 > Blockquotes are very handy in email to emulate reply text.
