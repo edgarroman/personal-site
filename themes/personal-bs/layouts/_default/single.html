@@ -59,7 +59,10 @@
 <article class="blog-post">
   <header>
     <h2 class="blog-post-title" dir="auto"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
-    <p class="blog-post-meta"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time> {{ i18n "authoredBy" }} {{ .Params.author | default .Site.Params.author }}{{ if or (.Params.categories) (.Params.tags) }} {{ i18n "postedIn" }} {{ partial "meta-terms.html" . }}{{ end }}</p>
+    <p class="blog-post-meta"><time
+        datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format $dateFormat }}</time>
+      {{ if or (.Params.categories) (.Params.tags) }}<br>
+      {{ i18n "postedIn" }} {{ partial "meta-terms.html" . }}{{ end }}</p>
   </header>
   {{ .Content }}
 
@@ -78,13 +81,13 @@
   <hr>
   <footer>
 
-  {{ if (ne ($.Param "sharingicons") false) }}
-  {{ partial "sharing-icons.html" . }}
-  {{ end }}
+    {{ if (ne ($.Param "sharingicons") false) }}
+    {{ partial "sharing-icons.html" . }}
+    {{ end }}
 
-  {{ if and (.Site.DisqusShortname) (ne .Params.comments false) }}
-  {{ template "_internal/disqus.html" . }}
-  {{ end }}
+    {{ if and (.Site.DisqusShortname) (ne .Params.comments false) }}
+    {{ template "_internal/disqus.html" . }}
+    {{ end }}
   </footer>
   {{ end }}
 

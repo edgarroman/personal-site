@@ -6,4 +6,8 @@ tags: ['blog', 'blogging', 'hugo']
 summary: 'How I setup my personal blog'
 ---
 
-A bit late to the game, I've decided to setup a personal blog.
+https://flaviocopes.com/stack/
+
+TODO:
+Automated builds
+https://willschenk.com/articles/2018/automating_hugo_with_circleci/
